@@ -3,13 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>City Detective</title>
+<title>City Detective - The Emerald Deva</title>
+<meta name="description" content="A cinematic browser detective game. A stolen amulet, four suspects, one Bangkok night. Search real scenes, question suspects, build your case board - solo or with a partner, no server needed.">
+<meta property="og:title" content="City Detective - The Emerald Deva">
+<meta property="og:description" content="A stolen amulet. Four suspects. One Bangkok night. Play solo or co-op, straight in the browser.">
+<meta property="og:image" content="cover.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0d10'/%3E%3Cpath d='M16 5 L22 13 L16 27 L10 13 Z' fill='none' stroke='%23c9a24b' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='15' r='3.4' fill='%233fae87'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400..650;1,9..144,400..650&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
 <div id="app"></div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js" defer></script>
 <script src="cases.js"></script>
 <script src="case-thailand.js"></script>
+<script src="sync.js"></script>
+<script src="amulet3d.js"></script>
 <script src="engine.js"></script>
 </body>
 </html>
