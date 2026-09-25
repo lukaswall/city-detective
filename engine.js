@@ -355,7 +355,7 @@
   function buildMap(frame) {
     var NS = 'http://www.w3.org/2000/svg';
     var svg = document.createElementNS(NS, 'svg');
-    svg.setAttribute('viewBox', '14 8 76 60');
+    svg.setAttribute('viewBox', '16 14 74 60');
     svg.setAttribute('class', 'citymap');
     svg.setAttribute('role', 'img');
     svg.setAttribute('aria-label', 'Map of Bangkok riverside with case locations');

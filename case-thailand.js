@@ -165,7 +165,7 @@ window.CASE_THAILAND = {
       image: 'loc-market.png',
       blurb: 'Someone tried to sell a temple piece here at 23:00.',
       description: "Lanterns, steam, a hundred stalls. The antiques dealer recognizes the photograph of the amulet before you finish the question - and laughs.",
-      map: { x: 24, y: 58 },
+      map: { x: 20, y: 52 },
       searches: [
         {
           id: 'clue-market-offer', x: 14, y: 62,
@@ -190,7 +190,7 @@ window.CASE_THAILAND = {
       image: 'loc-bar.png',
       blurb: "Viktor Hale's table, his whiskey, his alibi.",
       description: "Low tables, hanging bulbs, temple spires across the water. Viktor Hale holds court at his usual table and does not look like a man hiding anything.",
-      map: { x: 78, y: 46 },
+      map: { x: 81, y: 44 },
       searches: [
         {
           id: 'clue-viktor-alibi', x: 56, y: 86,
@@ -229,7 +229,7 @@ window.CASE_THAILAND = {
       image: 'loc-tuktuk.png',
       blurb: 'Tuk saw everyone that night. Make him talk.',
       description: "A rank of tuk-tuks under a flickering streetlight, rain starting again. Tuk polishes his handlebars with great dedication and does not meet your eye.",
-      map: { x: 45, y: 66 },
+      map: { x: 48, y: 69 },
       searches: [
         {
           id: 'clue-tuk-log', x: 42, y: 38,

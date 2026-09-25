@@ -431,7 +431,7 @@ button:focus-visible, [tabindex]:focus-visible {
 .pin-label {
   fill: var(--paper);
   font-family: 'Archivo', sans-serif;
-  font-size: 1.55px;
+  font-size: 1.2px;
   font-weight: 600;
   text-anchor: middle;
   letter-spacing: 0.02em;
@@ -439,7 +439,7 @@ button:focus-visible, [tabindex]:focus-visible {
 .pin-sub {
   fill: var(--paper-dim);
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 1.15px;
+  font-size: 0.95px;
   text-anchor: middle;
   letter-spacing: 0.06em;
 }
