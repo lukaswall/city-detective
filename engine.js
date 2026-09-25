@@ -366,6 +366,52 @@
     river.setAttribute('class', 'map-river');
     svg.appendChild(river);
 
+    // faint street grid to give the land mass structure
+    for (var gx = 20; gx <= 88; gx += 8) {
+      var gl = document.createElementNS(NS, 'line');
+      gl.setAttribute('x1', gx); gl.setAttribute('y1', 16);
+      gl.setAttribute('x2', gx - 6); gl.setAttribute('y2', 74);
+      gl.setAttribute('class', 'map-grid');
+      svg.appendChild(gl);
+    }
+    for (var gy = 20; gy <= 72; gy += 9) {
+      var gh = document.createElementNS(NS, 'line');
+      gh.setAttribute('x1', 17); gh.setAttribute('y1', gy);
+      gh.setAttribute('x2', 89); gh.setAttribute('y2', gy - 2);
+      gh.setAttribute('class', 'map-grid');
+      svg.appendChild(gh);
+    }
+    // river name along the water
+    var riverName = document.createElementNS(NS, 'text');
+    riverName.setAttribute('x', 30); riverName.setAttribute('y', 48);
+    riverName.setAttribute('class', 'map-rivername');
+    riverName.setAttribute('transform', 'rotate(-4 30 48)');
+    riverName.textContent = 'C H A O   P H R A Y A';
+    svg.appendChild(riverName);
+    // district watermark
+    var wm = document.createElementNS(NS, 'text');
+    wm.setAttribute('x', 19); wm.setAttribute('y', 21);
+    wm.setAttribute('class', 'map-watermark');
+    wm.textContent = 'OLD TOWN - RIVERSIDE DISTRICT';
+    svg.appendChild(wm);
+    // minimal compass
+    var comp = document.createElementNS(NS, 'g');
+    comp.setAttribute('class', 'map-compass');
+    var cc = document.createElementNS(NS, 'circle');
+    cc.setAttribute('cx', 85); cc.setAttribute('cy', 20); cc.setAttribute('r', 2.6);
+    comp.appendChild(cc);
+    var cn = document.createElementNS(NS, 'text');
+    cn.setAttribute('x', 85); cn.setAttribute('y', 19.4);
+    cn.setAttribute('class', 'map-compass-n');
+    cn.textContent = 'N';
+    comp.appendChild(cn);
+    var carrow = document.createElementNS(NS, 'line');
+    carrow.setAttribute('x1', 85); carrow.setAttribute('y1', 21.4);
+    carrow.setAttribute('x2', 85); carrow.setAttribute('y2', 20.2);
+    carrow.setAttribute('class', 'map-compass-line');
+    comp.appendChild(carrow);
+    svg.appendChild(comp);
+
     // route between locations in story order
     var pts = CASE.locations.map(function (l) { return l.map; });
     for (var i = 0; i < pts.length - 1; i++) {

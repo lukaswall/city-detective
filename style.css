@@ -897,3 +897,21 @@ button:focus-visible, [tabindex]:focus-visible {
   .btn-primary { width: 100%; text-align: center; }
   .hero-cta .btn-primary, .hero-cta .btn-quiet { width: auto; }
 }
+
+.map-grid { stroke: rgba(236,229,213,0.05); stroke-width: 0.07; }
+.map-rivername {
+  fill: rgba(140, 180, 210, 0.4);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.15px; letter-spacing: 0.35px;
+}
+.map-watermark {
+  fill: rgba(236,229,213,0.22);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.05px; letter-spacing: 0.3px;
+}
+.map-compass circle { fill: none; stroke: rgba(236,229,213,0.3); stroke-width: 0.12; }
+.map-compass-n {
+  fill: var(--paper-dim); font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.5px; text-anchor: middle;
+}
+.map-compass-line { stroke: var(--paper-dim); stroke-width: 0.14; }
