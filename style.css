@@ -408,13 +408,13 @@ button:focus-visible, [tabindex]:focus-visible {
 .map-river { fill: rgba(38, 66, 88, 0.55); }
 .map-temple { fill: var(--brass); opacity: 0.75; }
 .map-route {
-  stroke: var(--hairline); stroke-width: 0.18;
-  stroke-dasharray: 1.1 0.9;
+  stroke: var(--hairline); stroke-width: 0.1;
+  stroke-dasharray: 0.7 0.6;
 }
 .map-pin { cursor: pointer; }
 .map-pin .pin-dot { fill: var(--brass); }
 .map-pin .pin-halo {
-  fill: transparent; stroke: var(--brass); stroke-width: 0.16;
+  fill: transparent; stroke: var(--brass); stroke-width: 0.1;
   opacity: 0.7;
   animation: pin-pulse 2.4s ease-out infinite;
 }
@@ -431,7 +431,7 @@ button:focus-visible, [tabindex]:focus-visible {
 .pin-label {
   fill: var(--paper);
   font-family: 'Archivo', sans-serif;
-  font-size: 2.5px;
+  font-size: 1.55px;
   font-weight: 600;
   text-anchor: middle;
   letter-spacing: 0.02em;
@@ -439,7 +439,7 @@ button:focus-visible, [tabindex]:focus-visible {
 .pin-sub {
   fill: var(--paper-dim);
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 1.9px;
+  font-size: 1.15px;
   text-anchor: middle;
   letter-spacing: 0.06em;
 }

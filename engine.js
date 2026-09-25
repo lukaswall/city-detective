@@ -355,7 +355,7 @@
   function buildMap(frame) {
     var NS = 'http://www.w3.org/2000/svg';
     var svg = document.createElementNS(NS, 'svg');
-    svg.setAttribute('viewBox', '0 0 100 78');
+    svg.setAttribute('viewBox', '14 8 76 60');
     svg.setAttribute('class', 'citymap');
     svg.setAttribute('role', 'img');
     svg.setAttribute('aria-label', 'Map of Bangkok riverside with case locations');
@@ -365,11 +365,6 @@
     river.setAttribute('d', 'M -2 40 C 18 34, 30 46, 46 42 C 62 38, 66 26, 84 30 C 94 32, 99 36, 102 36 L 102 52 C 88 50, 76 44, 62 50 C 48 56, 34 50, 20 54 C 8 57, 0 56, -2 55 Z');
     river.setAttribute('class', 'map-river');
     svg.appendChild(river);
-    // temple mark on the far bank
-    var temple = document.createElementNS(NS, 'path');
-    temple.setAttribute('d', 'M 70 36 l 1.4 -3.2 l 1.4 3.2 l -0.5 0 l 0 2 l -1.8 0 l 0 -2 Z');
-    temple.setAttribute('class', 'map-temple');
-    svg.appendChild(temple);
 
     // route between locations in story order
     var pts = CASE.locations.map(function (l) { return l.map; });
@@ -391,23 +386,23 @@
       g.setAttribute('aria-label', loc.name);
 
       var halo = document.createElementNS(NS, 'circle');
-      halo.setAttribute('cx', loc.map.x); halo.setAttribute('cy', loc.map.y); halo.setAttribute('r', 3.2);
+      halo.setAttribute('cx', loc.map.x); halo.setAttribute('cy', loc.map.y); halo.setAttribute('r', 2.1);
       halo.setAttribute('class', 'pin-halo');
       g.appendChild(halo);
 
       var dot = document.createElementNS(NS, 'circle');
-      dot.setAttribute('cx', loc.map.x); dot.setAttribute('cy', loc.map.y); dot.setAttribute('r', 1.5);
+      dot.setAttribute('cx', loc.map.x); dot.setAttribute('cy', loc.map.y); dot.setAttribute('r', 0.85);
       dot.setAttribute('class', 'pin-dot');
       g.appendChild(dot);
 
       var label = document.createElementNS(NS, 'text');
-      label.setAttribute('x', loc.map.x); label.setAttribute('y', loc.map.y - 3.4);
+      label.setAttribute('x', loc.map.x); label.setAttribute('y', loc.map.y - 2.6);
       label.setAttribute('class', 'pin-label');
       label.textContent = loc.time + '  ' + loc.name;
       g.appendChild(label);
 
       var sub = document.createElementNS(NS, 'text');
-      sub.setAttribute('x', loc.map.x); sub.setAttribute('y', loc.map.y + 4.6);
+      sub.setAttribute('x', loc.map.x); sub.setAttribute('y', loc.map.y + 3.1);
       sub.setAttribute('class', 'pin-sub');
       sub.textContent = state.visited[loc.id]
         ? (foundHere === allHere ? 'searched clean' : foundHere + '/' + allHere + ' evidence')
